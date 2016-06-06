@@ -37,9 +37,11 @@
 
   <!-- Color CSS Styles  -->
   <link rel="stylesheet" type="text/css" href="css/colors/orange.css" title="orange" media="screen" />
+  
+  <!-- lockScreen CSS Styles  -->
+  <link rel="stylesheet" href="lockScreen/app.css" />
 
-  <!-- 日曆設定-->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.min.css">
+
 
   <!-- Margo JS  -->
   <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
@@ -81,6 +83,7 @@
     <!-- Start Header -->
     <div class="hidden-header"></div>
     <header class="clearfix">
+    
 
       <!-- Start Header ( Logo & Naviagtion ) -->
       <div class="navbar navbar-default navbar-top">
@@ -103,16 +106,7 @@
               <li><a href="products.htm">相關商品</a></li>
               <li><a href="cooperation.htm">相關合作</a></li>
               <li><a href="contact-us.htm">聯絡我們</a></li>
-              <li><a class="active" href="#">會員專區</a>
-                <ul class="dropdown">                  
-                  <li><a href="coach.htm">課程管理</a>
-                  </li>
-                  <li><a href="member-manager.htm">人員管理</a>
-                  </li>
-                  <li><a href="blog-manager.htm">知識上稿</a>
-                  </li>
-                </ul>
-               </li>
+              <li><a class="active" href="login.htm">會員專區</a></li>
             </ul>
             <!-- End Navigation List -->
           </div>
@@ -127,15 +121,7 @@
           <li><a href="products.htm">相關商品</a></li>
           <li><a href="cooperation.htm">相關合作</a></li>
           <li><a href="contact-us.htm">聯絡我們</a></li>
-          <li><a class="active" href="#">會員專區</a>
-            <ul class="dropdown">                  
-                  <li><a href="coach.htm">課程管理</a>
-                  </li>
-                  <li><a href="member-manager.htm">人員管理</a>
-                  </li>
-                  <li><a href="blog-manager.htm">知識上稿</a>
-                  </li>
-                </ul>
+          <li><a class="active" href="login.htm">會員專區</a></ul>
            </li>
         </ul>
         <!-- Mobile Menu End -->
@@ -173,60 +159,58 @@
 
         <div class="row">
 
-          <div class="col-md-12">
+          <div class="col-md-5">
 
             <!-- Classic Heading -->
-            <h4 class="classic-title"><span>編輯體適能知識</span></h4>
-						
+            <h4 class="classic-title"><span>登入</span></h4>
+
             <!-- Start Contact Form -->            
-            <form role="form" class="contact-form" method="post">
-             <div class="blog-post quote-post">   
+
+            <form role="form" class="contact-form" id="contact-form" method="post">
               <div class="form-group has-feedback">
-                  <label class="control-label" for="coachname">標題：</label>
-                  <input type="text" class="form-control" placeholder="增加肌肉質量的十大食物" name="coachname" id="nickname" aria-describedby="coachnameStatus">
+                  <label class="control-label" for="email">Email：</label>
+                  <input type="email" class="form-control" placeholder="Email" name="Email" id="email" aria-describedby="emailStatus">
                   <span class="glyphicon glyphicon-ok form-control-feedback text-success" aria-hidden="true"></span>
+                  <!--<span class="glyphicon glyphicon-remove form-control-feedback text-danger" aria-hidden="true"></span>-->
+                  <span id="emailStatus" class="sr-only">(success)</span>
+              </div>
+                          
+              <div class="tabs-section">
+              <!-- Nav Tabs -->
+              <span style="float:right;margin-right:10px;"><a href="forgetpw.htm">忘記密碼 <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a></span>
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab-1" data-toggle="tab"><i class="fa fa-share-alt"></i> 圖形密碼</a></li>
+                <li><a href="#tab-2" data-toggle="tab"><i class="fa fa-pencil" aria-hidden="true"></i> 文字密碼</a></li>
+              </ul>
+
+              <!-- Tab panels -->
+              <div class="tab-content">
+                <!-- Tab Content 1 -->
+                <div class="tab-pane fade in active" id="tab-1">
+                <button id="reset-button" class="button blue">Reset</button>
+                <div class="hr1" style="margin:5px 0px;"></div>
+                <div id="lock-screen-container">
+                  <div id="lock-screen" /></div>
+                </div>
+                </div>
+                <!-- Tab Content 2 -->
+                <div class="tab-pane fade" id="tab-2">
+                  <div class="form-group has-feedback">
+                  <label class="control-label" for="email">Password：</label>
+                  <input type="email" class="form-control" placeholder="Password" name="Password" id="password" aria-describedby="passwordStatus">
+                  <!--<span class="glyphicon glyphicon-ok form-control-feedback text-success" aria-hidden="true"></span>-->
                   <span class="glyphicon glyphicon-remove form-control-feedback text-danger" aria-hidden="true"></span>
-                  <span id="coachnameStatus" class="sr-only">(success)</span>
+                  <span id="passwordStatus" class="sr-only">(success)</span>
+              		</div>
+                </div>
               </div>
-                
-              <div class="form-group has-feedback">
-                  <label class="control-label" for="coachname">日期：</label>
-                  <div class="input-group date form_date" data-date="2016/05/01" data-date-format="yyyy/mm/dd" data-link-field="dtp_input1">
-                  <input class="form-control" size="16" type="text" value="2016/05/01" readonly>
-                  <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                  </div>
+              <!-- End Tab Panels -->
               </div>
-              
-                
-              <div class="form-group has-feedback">
-                  <label class="control-label" for="nickname">圖片：</label>
-                  <input type="file" class="form-control" name="photopic" id="photopic" aria-describedby="photopicStatus">
-                  <span class="glyphicon glyphicon-ok form-control-feedback text-success" aria-hidden="true"></span>
-                  <span class="glyphicon glyphicon-remove form-control-feedback text-danger" aria-hidden="true"></span>
-                  <span id="photopicStatus" class="sr-only">(success)</span>
-              </div>
-              
-              <div class="form-group has-feedback">
-                  <label class="control-label" for="nickname">內文：</label>
-                  <textarea class="form-control" rows="15">Beyond Fitness是 私人體能訓練的專家（Sport and Fitness Professional），我們擁有豐富的實務訓練經驗及充實的科學訓練背景知識。
-私人體能訓練課程就是依據客戶個人整體健康數據、全方位體能及生活評估，規劃出最有效率以及最貼近客戶需求的體能計劃。我們最大的榮耀是讓客戶得以在最好的環境、生活、時間中取得最大的訓練價值。
-有許多人刻苦訓練，但他們一點都不關心營養補給。因此，他們在訓練上花費的時間和精力被浪費了。為什麼？因為他們認為營養是複雜的，他們催眠自己只要訓練得當一切自然水到渠成。
-Training Smart！！這意味著知道營養如何運作的原理以及如何利用它為自己的健身強體加分。這適用於任何人，Everyone！無論是一般的健身保養或肌肉質量增加。
-◎好的開始是成功的一半，以下是十大食物清單，幫助您獲得更多的肌肉和力量
-Beyond Fitness是 私人體能訓練的專家（Sport and Fitness Professional），我們擁有豐富的實務訓練經驗及充實的科學訓練背景知識。
-私人體能訓練課程就是依據客戶個人整體健康數據、全方位體能及生活評估，規劃出最有效率以及最貼近客戶需求的體能計劃。我們最大的榮耀是讓客戶得以在最好的環境、生活、時間中取得最大的訓練價值。
-有許多人刻苦訓練，但他們一點都不關心營養補給。因此，他們在訓練上花費的時間和精力被浪費了。為什麼？因為他們認為營養是複雜的，他們催眠自己只要訓練得當一切自然水到渠成。
-Training Smart！！這意味著知道營養如何運作的原理以及如何利用它為自己的健身強體加分。這適用於任何人，Everyone！無論是一般的健身保養或肌肉質量增加。</textarea>
-              </div>
-              </div>            
               
               <div class="hr1" style="margin:5px 0px;"></div>
-              <a href="blog-manager.htm" class="btn-system btn-medium">送出</a>
-              <a href="#" class="btn-system btn-medium border-btn">取消</a>
-              
-            <!-- End Contact Form -->
+              <button type="button" class="btn btn-warning btn-lg btn-block" onClick="location.href='vip.htm';"><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;&nbsp;使用 Email 登入</button>
             </form>
-
+            <!-- End Contact Form -->
         </div>
 
       </div>
@@ -245,11 +229,9 @@ Training Smart！！這意味著知道營養如何運作的原理以及如何利
 
   <!-- Go To Top Link -->
   <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-  
-  <script src="js/bootstrap-datetimepicker.js"></script> 
-	<script type="text/javascript" src="js/locales/bootstrap-datetimepicker.zh-TW.js" charset="UTF-8"></script> 
-
   <script type="text/javascript" src="js/script.js"></script>
+	<script src="lockScreen/kinetic-v4.6.js"></script>
+  <script src="lockScreen/html5-android-pattern-lockScreen.min.js"></script>
 
 </body>
 
