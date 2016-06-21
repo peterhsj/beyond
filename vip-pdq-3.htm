@@ -84,7 +84,7 @@
     <div class="hidden-header"></div>
     <header class="clearfix">
     
-
+    
       <!-- Start Header ( Logo & Naviagtion ) -->
       <div class="navbar navbar-default navbar-top">
         <div class="container">
@@ -107,7 +107,16 @@
               <li><a href="products.htm">相關商品</a></li>
               <li><a href="cooperation.htm">相關合作</a></li>
               <li><a href="contact-us.htm">聯絡我們</a></li>
-              <li><a class="active" href="#">會員專區</a></li>
+              <li><a class="active" href="#">會員專區</a>
+                <ul class="dropdown">                  
+                  <li><a href="coach.htm">課程管理</a>
+                  </li>
+                  <li><a href="member-manager.htm">人員管理</a>
+                  </li>
+                  <li><a href="blog-manager.htm">知識上稿</a>
+                  </li>
+                </ul>			  
+			  </li>
             </ul>
             <!-- End Navigation List -->
           </div>
@@ -122,7 +131,16 @@
           <li><a href="products.htm">相關商品</a></li>
           <li><a href="cooperation.htm">相關合作</a></li>
           <li><a href="contact-us.htm">聯絡我們</a></li>
-          <li><a class="active" href="#">會員專區</a></li>
+          <li><a class="active" href="#">會員專區</a>
+                <ul class="dropdown">                  
+                  <li><a href="coach.htm">課程管理</a>
+                  </li>
+                  <li><a href="member-manager.htm">人員管理</a>
+                  </li>
+                  <li><a href="blog-manager.htm">知識上稿</a>
+                  </li>
+                </ul>
+           </li>
         </ul>
         <!-- Mobile Menu End -->
 
@@ -162,18 +180,102 @@
           <div class="col-md-5">
 
             <!-- Classic Heading -->
-            <h4 class="classic-title"><span>登入</span></h4>
-
-            <!-- Start Contact Form -->            
-            <p>若您已有<span class="orange-text">會員編號</span>，第一次登入請先註冊 <a href="register.htm" class="btn-system btn-small"><i class="glyphicon glyphicon-user" aria-hidden="true"></i>&nbsp;&nbsp;註冊</a></p>
-            <div class="hr1" style="margin-top:10px;margin-bottom:10px;"></div>
-            
+            <h4 class="classic-title"><span>PDQ - Step 4</span></h4>
+          <!-- Start Contact Form -->            
             <form role="form" class="contact-form" id="contact-form" method="post">
-            	<button type="button" class="btn btn-primary btn-lg btn-block" onClick="location.href='vip.htm';"><i class="fa fa-facebook-square" aria-hidden="true"></i>&nbsp;&nbsp;使用 Facebook 登入</button>
-				<div class="hr1" style="margin-top:5px;margin-bottom:5px;"></div>
-				<button type="button" class="btn btn-warning btn-lg btn-block" onClick="location.href='login-email.htm';"><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;&nbsp;使用 Email 登入</button>
-            </form>
+              <p><strong>會員編號：</strong><span class="text-primary">A123456</span></p>
+              <p><strong>學員姓名：</strong><span class="text-primary">王大明</span></p>
+			 <div class="hr1" style="margin:5px 0px;"></div>
+              <!-- Divider -->
+         	<div class="col-md-12">
+              <h4 class="orange-text"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 第三步：訓練水平</h4>
+              <div class="hr1" style="margin-top:5px;margin-bottom:5px;"></div>
+
+					 <div class="form-group has-feedback">
+							<label class="control-label" for="q1">1.你認為你的工作是？</label>
+							<div class="controls">
+							  <input type="text" class="requiredField">
+							</div>
+								<div class="sidebar">
+								<!-- Tags Widget -->
+								<div class="widget widget-tags">
+								  <div class="tagcloud">
+									<a href="#">0.久坐型</a>
+									<a href="#">1.活動型</a>
+									<a href="#">2.耗費體力型</a>
+								  </div>
+								</div>
+							  </div>							
+					  </div>
+					  
+					 <div class="form-group has-feedback">
+							<label class="control-label" for="q1">2.你的愛好是什麼？</label>
+							<div class="controls">
+							  <input type="text" class="requiredField">
+							</div>
+								<div class="sidebar">
+								<!-- Tags Widget -->
+								<div class="widget widget-tags">
+								  <div class="tagcloud">
+									<a href="#">0.非活動型（例如：閱讀）</a>
+									<a href="#">1.活動型（例如：園藝）</a>
+								  </div>
+								</div>
+							  </div>							
+					  </div>
+
+					 <div class="form-group has-feedback">
+							<label class="control-label" for="q1">3.你是否定期參加娛樂活動？</label>
+							<div class="controls">
+							  <input type="text" class="requiredField">
+							</div>
+								<div class="sidebar">
+								<!-- Tags Widget -->
+								<div class="widget widget-tags">
+								  <div class="tagcloud">
+									<a href="#">0.每月/每週少於一次(更不頻繁)</a>								  
+									<a href="#">1.每月/每週一次</a>
+									<a href="#">2.每月/每週超過一次(更頻繁)</a>
+								  </div>
+								</div>
+							  </div>							
+					  </div>					  
+
+  					 <div class="form-group has-feedback">
+							<label class="control-label" for="q1">4.你現在鍛鍊嗎？</label>
+							<div class="controls">
+							  <input type="text" class="requiredField">
+							</div>
+								<div class="sidebar">
+								<!-- Tags Widget -->
+								<div class="widget widget-tags">
+								  <div class="tagcloud">
+									<a href="#">0.過去訓練或者從不訓練</a>								  
+									<a href="#">2.目前在訓練（何種類型的訓練？）</a>
+								  </div>
+								</div>
+							  </div>							
+					  </div> 
+
+					  <h6 class="classic-title"><span>訓練水平得分</span></h6>
+						 <!-- Some Info -->
+						<p>0-2=初期(初級階段)</p>
+						<p>3-5=中級(中級階段)</p>
+						<p>6+=高級(高級階段)</p>
+             </div>
+			 
+			  <a href="vip-pdq-2.htm" class="btn-system btn-medium border-btn"><i class="fa fa-hand-o-left" aria-hidden="true"></i> 上一步</a>
+              <a href="#" class="btn-system btn-medium"><span class="glyphicon glyphicon-save" aria-hidden="true"></span> 暫存</a>
+			  <a href="vip-pdq-4.htm" class="btn-system btn-medium">下一步 <i class="fa fa-hand-o-right" aria-hidden="true"></i></a>
+              
+              
             <!-- End Contact Form -->
+            
+          </div>
+            </form>
+            
+
+
         </div>
 
       </div>

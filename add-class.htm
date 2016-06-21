@@ -84,6 +84,28 @@
     <div class="hidden-header"></div>
     <header class="clearfix">
     
+      <!-- Start Top Bar -->
+      <div class="top-bar">
+        <div class="container">
+          <div class="row">
+            <!-- .col-md-6 -->
+            <div class="col-md-12">
+              <!-- Start Social Links -->
+              <ul class="social-list">
+                <li>
+                  <a href="https://www.facebook.com/beyond.fitness.pro/" title="Facebook" target="_blank" class="facebook itl-tooltip" data-placement="bottom"><i class="fa fa-facebook"></i></a>
+                </li>
+              </ul>
+              <!-- End Social Links -->
+            </div>
+            <!-- .col-md-6 -->
+          </div>
+          <!-- .row -->
+        </div>
+        <!-- .container -->
+      </div>
+      <!-- .top-bar -->
+      <!-- End Top Bar -->
 
       <!-- Start Header ( Logo & Naviagtion ) -->
       <div class="navbar navbar-default navbar-top">
@@ -107,7 +129,16 @@
               <li><a href="products.htm">相關商品</a></li>
               <li><a href="cooperation.htm">相關合作</a></li>
               <li><a href="contact-us.htm">聯絡我們</a></li>
-              <li><a class="active" href="#">會員專區</a></li>
+              <li><a class="active" href="#">會員專區</a>
+                <ul class="dropdown">                  
+                  <li><a href="coach.htm">課程管理</a>
+                  </li>
+                  <li><a href="member-manager.htm">人員管理</a>
+                  </li>
+                  <li><a href="blog-manager.htm">知識上稿</a>
+                  </li>
+                </ul>
+               </li>
             </ul>
             <!-- End Navigation List -->
           </div>
@@ -122,7 +153,16 @@
           <li><a href="products.htm">相關商品</a></li>
           <li><a href="cooperation.htm">相關合作</a></li>
           <li><a href="contact-us.htm">聯絡我們</a></li>
-          <li><a class="active" href="#">會員專區</a></li>
+          <li><a class="active" href="#">會員專區</a>
+            <ul class="dropdown">                  
+                  <li><a href="coach.htm">課程管理</a>
+                  </li>
+                  <li><a href="member-manager.htm">人員管理</a>
+                  </li>
+                  <li><a href="blog-manager.htm">知識上稿</a>
+                  </li>
+                </ul>
+           </li>
         </ul>
         <!-- Mobile Menu End -->
 
@@ -162,18 +202,86 @@
           <div class="col-md-5">
 
             <!-- Classic Heading -->
-            <h4 class="classic-title"><span>登入</span></h4>
-
-            <!-- Start Contact Form -->            
-            <p>若您已有<span class="orange-text">會員編號</span>，第一次登入請先註冊 <a href="register.htm" class="btn-system btn-small"><i class="glyphicon glyphicon-user" aria-hidden="true"></i>&nbsp;&nbsp;註冊</a></p>
-            <div class="hr1" style="margin-top:10px;margin-bottom:10px;"></div>
-            
+            <h4 class="classic-title"><span>新增上課次數</span></h4>
+            <!-- Stat Search -->				
+            <!-- Start Post -->
+            <div class="blog-post quote-post">
+              <!-- Post Content -->
+              <div class="user-info clearfix">
+                  <div class="author-image">
+					<div class="user-image">
+						<img alt="" src="images/noMember.jpg" />                    
+              		</div>
+					  <div class="user-bio">
+						<h2 class="text-primary">林志玲 </h2>
+						
+						<div class="hr1" style="margin-top:10px; margin-bottom:10px;"></div>
+						
+						<p><strong>會員編號：</strong>A122122</p>
+						<p><strong>電話：</strong>0922186668</p>
+						<p><strong>Email：</strong>xxxx@xxx.xxx</p>
+						
+					  </div>
+					</div>					
+               </div>                
+            </div>        
+			<h4 class="classic-title"><span>購買上課紀錄</span></h4>
+                <!-- TABLE 1 -->
+                  <table class="panel panel-default table">
+                    <tr class="info">
+                      <th>建檔日期</th>
+                      <th>總次數</th>
+                      <th>課程類別</th>
+                    </tr>
+                    <tr>
+                      <td>2015/7/1</td>
+                      <td>50</td>
+                      <td>A-1500</td>
+                    </tr>
+                    <tr>
+                      <td>2016/7/1</td>
+                      <td>50</td>
+                      <td>A-1500</td>
+                    </tr>
+                  </table>			
+		    <div class="hr1" style="margin-bottom:10px;"></div>
+			<h4 class="classic-title"><span>新增上課次數</span></h4>
             <form role="form" class="contact-form" id="contact-form" method="post">
-            	<button type="button" class="btn btn-primary btn-lg btn-block" onClick="location.href='vip.htm';"><i class="fa fa-facebook-square" aria-hidden="true"></i>&nbsp;&nbsp;使用 Facebook 登入</button>
-				<div class="hr1" style="margin-top:5px;margin-bottom:5px;"></div>
-				<button type="button" class="btn btn-warning btn-lg btn-block" onClick="location.href='login-email.htm';"><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;&nbsp;使用 Email 登入</button>
-            </form>
+
+              <div class="form-group has-feedback">
+                  <label class="control-label" for="nickname">上課次數：</label>
+                  <input type="text" class="form-control" placeholder="請輸入數字" name="times" id="times" aria-describedby="timesStatus">
+                  <!--<span class="glyphicon glyphicon-ok form-control-feedback text-success" aria-hidden="true"></span>-->
+                  <span class="glyphicon glyphicon-remove form-control-feedback text-danger" aria-hidden="true"></span>
+                  <span id="timesStatus" class="sr-only">(success)</span>
+              </div>			  
+
+              <div class="form-group has-feedback">
+                  <label class="control-label" for="nickname">課程類別：</label>
+                      <select class="form-control">
+                        <option>A-1500</option>
+                        <option>B-1600</option>
+						<option>C-1800</option>
+						<option>D-1900</option>
+                      </select>
+              </div>	
+			  
+             <div class="tabs-section">
+             
+              <div class="hr1" style="margin:5px 0px;"></div>
+              
+              <!--<div style="height:60px;border:1px solid #000;">驗證碼區塊</div>-->
+              
+              <div class="hr1" style="margin:5px 0px;"></div>
+			  <a href="member-manager.htm" class="btn-system btn-medium">回上頁 <i class="fa fa-reply" aria-hidden="true"></i></a>
+              <a href="add-class-verify.htm" class="btn-system btn-medium"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>確認</a>
+              
             <!-- End Contact Form -->
+            
+          </div>
+            <!-- End Post -->
+			
+			
         </div>
 
       </div>

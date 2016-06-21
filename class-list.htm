@@ -102,7 +102,8 @@
               <i class="fa fa-bars"></i>
             </button>
             <!-- End Toggle Nav Link For Mobiles -->
-            <a class="navbar-brand" href="index.htm"><img src="images/Beyond-Fitness.png" alt=""></a>
+            <a class="navbar-brand hidden-xs" href="index.htm"><img src="images/Beyond-Fitness.png" alt=""></a>
+            <a class="navbar-brand visible-xs-block" href="index.htm"><img src="images/Beyond-Fitness.png" alt="" width="270" height="41"></a>
           </div>
           <div class="navbar-collapse collapse">
             <!-- Start Navigation List -->
@@ -185,9 +186,19 @@
         <div class="row">
 
           <div class="col-md-3">
-
             <!-- Classic Heading -->
-            <!--<h4 class="classic-title"><span>王建民 的行事曆</span></h4>-->
+            <div class="blog-post">
+              <!-- Classic Content -->
+              <div class="user-info clearfix">
+                  <div class="user-image">
+                    <img alt="" src="images/noMember.jpg" />                    
+              		</div>
+                  <div class="user-bio" style="padding-top:20px;">
+                    <h4 class="classic-title"><span>Hi 王建明</span></h4>
+                  </div>
+                </div>                
+            </div>            
+            <!-- End Classic -->
 
             <!-- Start Contact Form -->
             <!-- Categories Widget -->
@@ -232,7 +243,7 @@
 
             <!-- Start Contact Form -->  
             <!-- Stat Search -->
-            <div class="navbar bg_white" style="min-height:30px;">
+            <div class="navbar bg_gray" style="min-height:30px;">
               <div class="search-side">
                 <a href="add-student.htm" class="btn-system btn-small">登記上課時間 <span class="glyphicon glyphicon-calendar"></span></a>
                 <a href="#" class="btn-system btn-small">自由教練打卡 <i class="fa fa-check-square" aria-hidden="true"></i></a>
@@ -475,7 +486,7 @@ $(function () {
             enabled: false
         },
         tooltip: {
-            pointFormat: '有: <b>{point.y:.1f} 個學員</b>'
+            pointFormat: '有: <b>{point.y:.0f} 個學員</b>'
         },
         series: [{
             name: '時間',
@@ -501,7 +512,7 @@ $(function () {
                 rotation: -90,
                 color: '#FFFFFF',
                 align: 'right',
-                format: '{point.y:.1f}', // one decimal
+                format: '{point.y:.0f}', // one decimal
                 y: 10, // 10 pixels down from the top
                 style: {
                     fontSize: '13px',

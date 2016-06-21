@@ -84,7 +84,7 @@
     <div class="hidden-header"></div>
     <header class="clearfix">
     
-
+    
       <!-- Start Header ( Logo & Naviagtion ) -->
       <div class="navbar navbar-default navbar-top">
         <div class="container">
@@ -107,7 +107,16 @@
               <li><a href="products.htm">相關商品</a></li>
               <li><a href="cooperation.htm">相關合作</a></li>
               <li><a href="contact-us.htm">聯絡我們</a></li>
-              <li><a class="active" href="#">會員專區</a></li>
+              <li><a class="active" href="#">會員專區</a>
+                <ul class="dropdown">                  
+                  <li><a href="coach.htm">課程管理</a>
+                  </li>
+                  <li><a href="member-manager.htm">人員管理</a>
+                  </li>
+                  <li><a href="blog-manager.htm">知識上稿</a>
+                  </li>
+                </ul>			  
+			  </li>
             </ul>
             <!-- End Navigation List -->
           </div>
@@ -122,7 +131,16 @@
           <li><a href="products.htm">相關商品</a></li>
           <li><a href="cooperation.htm">相關合作</a></li>
           <li><a href="contact-us.htm">聯絡我們</a></li>
-          <li><a class="active" href="#">會員專區</a></li>
+          <li><a class="active" href="#">會員專區</a>
+                <ul class="dropdown">                  
+                  <li><a href="coach.htm">課程管理</a>
+                  </li>
+                  <li><a href="member-manager.htm">人員管理</a>
+                  </li>
+                  <li><a href="blog-manager.htm">知識上稿</a>
+                  </li>
+                </ul>
+           </li>
         </ul>
         <!-- Mobile Menu End -->
 
@@ -162,18 +180,82 @@
           <div class="col-md-5">
 
             <!-- Classic Heading -->
-            <h4 class="classic-title"><span>登入</span></h4>
-
-            <!-- Start Contact Form -->            
-            <p>若您已有<span class="orange-text">會員編號</span>，第一次登入請先註冊 <a href="register.htm" class="btn-system btn-small"><i class="glyphicon glyphicon-user" aria-hidden="true"></i>&nbsp;&nbsp;註冊</a></p>
-            <div class="hr1" style="margin-top:10px;margin-bottom:10px;"></div>
-            
+            <h4 class="classic-title"><span>PDQ - Step 3</span></h4>
+          <!-- Start Contact Form -->            
             <form role="form" class="contact-form" id="contact-form" method="post">
-            	<button type="button" class="btn btn-primary btn-lg btn-block" onClick="location.href='vip.htm';"><i class="fa fa-facebook-square" aria-hidden="true"></i>&nbsp;&nbsp;使用 Facebook 登入</button>
-				<div class="hr1" style="margin-top:5px;margin-bottom:5px;"></div>
-				<button type="button" class="btn btn-warning btn-lg btn-block" onClick="location.href='login-email.htm';"><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;&nbsp;使用 Email 登入</button>
-            </form>
+              <p><strong>會員編號：</strong><span class="text-primary">A123456</span></p>
+              <p><strong>學員姓名：</strong><span class="text-primary">王大明</span></p>
+			 <div class="hr1" style="margin:5px 0px;"></div>
+              <!-- Divider -->
+         	<div class="col-md-12">
+              <h4 class="orange-text"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 第二步：風格</h4>
+              <div class="hr1" style="margin-top:5px;margin-bottom:5px;"></div>
+
+					 <div class="form-group has-feedback">
+							<label class="control-label" for="q1">1.在訓練過程中，處在充滿挑戰性的環境，或是在比較有安全感的環境下，對你而言哪一個比較重要？</label>
+							<div class="controls">
+							  <input type="text" class="requiredField">
+							</div>
+								<div class="sidebar">
+								<!-- Tags Widget -->
+								<div class="widget widget-tags">
+								  <div class="tagcloud">
+									<a href="#">Ａ.挑戰、冒險=   挑戰型</a>
+									<a href="#">B.穩定、單純、實用=  保守型</a>
+								  </div>
+								</div>
+							  </div>							
+					  </div>
+					  
+					 <div class="form-group has-feedback">
+							<label class="control-label" for="q1">2.每次訓練內容上循序漸進穩定的課程編排或是提供有趣多樣化的課程編排，你是否更享受這樣的訓練？</label>
+							<div class="controls">
+							  <input type="text" class="requiredField">
+							</div>
+								<div class="sidebar">
+								<!-- Tags Widget -->
+								<div class="widget widget-tags">
+								  <div class="tagcloud">
+									<a href="#">A.多樣化=   挑戰型</a>
+									<a href="#">B.常規=  保守型</a>
+								  </div>
+								</div>
+							  </div>							
+					  </div>
+
+					 <div class="form-group has-feedback">
+							<label class="control-label" for="q1">3.你的職業？</label>
+							<div class="controls">
+							  <input type="text" class="requiredField">
+							</div>
+								<div class="sidebar">
+								<!-- Tags Widget -->
+								<div class="widget widget-tags">
+								  <div class="tagcloud">
+									<a href="#">A.是否需要長時間坐著？   是= 挑戰型  否=保守型</a>
+									<a href="#">B.是否需要重複性動作？   是= 挑戰型  否=保守型</a>
+									<a href="#">C.導致你焦慮或精神緊張?  是= 挑戰型  否=保守型</a>
+								  </div>
+								</div>
+							  </div>							
+					  </div>					  
+					  <h6 class="classic-title"><span>風格評分</span></h6>
+						 <!-- Some Info -->
+						<p>如果在7分風格問題中，客戶獲得5分，則他認定方案風格為漸進型或傳統型，低於5分或者默認的方案策略為混合型</p>             
+             </div>
+			 
+			  <a href="vip-pdq-1.htm" class="btn-system btn-medium border-btn"><i class="fa fa-hand-o-left" aria-hidden="true"></i> 上一步</a>
+              <a href="#" class="btn-system btn-medium"><span class="glyphicon glyphicon-save" aria-hidden="true"></span> 暫存</a>
+			  <a href="vip-pdq-3.htm" class="btn-system btn-medium">下一步 <i class="fa fa-hand-o-right" aria-hidden="true"></i></a>
+              
+              
             <!-- End Contact Form -->
+            
+          </div>
+            </form>
+            
+
+
         </div>
 
       </div>
