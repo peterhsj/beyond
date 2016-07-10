@@ -37,13 +37,8 @@
 	<!-- Color CSS Styles  -->
 	<link rel="stylesheet" type="text/css" href="css/colors/black.css" title="orange" media="screen" />
 
-	<!-- Respomsive slider -->
-	<link href="calendar/responsive-calendar.css" rel="stylesheet">
-
   <!-- FloatChart-->
   <link href="flot/custom.css" rel="stylesheet" type="text/css">
-
-	<style type="text/css"></style>
 
 	<!-- Margo JS  -->
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
@@ -62,7 +57,7 @@
 	<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
 	<script type="text/javascript" src="js/jquery.parallax.js"></script>
 	<script type="text/javascript" src="js/jquery.slicknav.js"></script>
-
+  
 	<!--[if IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -152,6 +147,7 @@
     <div id="content">
     <div class="container">
         <div class="row">
+        <div class="col-md-12"> 
             
             <!-- Classic Heading -->
             <h4 class="classic-title"><span>4/29 課程內容 - 王大明</span></h4>
@@ -162,21 +158,16 @@
             <div class="col-md-6">
                 <h4 class="orange-text"><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span> 著重方向：</h4>
             		<div class="hr1" style="margin-top:5px;margin-bottom:5px;"></div>
-                <div class="panel panel-default">
-                <div class="panel-body">
-                    <div id="placeholder3" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-                  </div>
-              </div>
+                <div class="stack-container">
+                  <div id="placeholder3" style="height: 400px; margin: 0 auto"></div>
+                </div>
               </div>
             <div class="col-md-6">
                 <h4 class="orange-text"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> 體適能：</h4>
             		<div class="hr1" style="margin-top:5px;margin-bottom:5px;"></div>
-                <div class="panel panel-default">
-                <div class="panel-body">
-                    <!-- div id="pie_2" style="min-width: 310px; height: 400px; margin: 0 auto"></div -->
-                    <div id="placeholder4" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-                  </div>
-              </div>
+                <div class="stack-container">
+                  <div id="placeholder2" class="stack-placeholder" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
+                </div>
               </div>
             <div class="col-md-12">
                 <h4 class="orange-text"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> 課程：</h4>
@@ -206,7 +197,7 @@
                     <tr class="warning">
                         <td colspan="4"><strong>學員心得：</strong>
                           <a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a>
-                          <input class="form-control" value="應該早點叫我正反握,累死我了">                       
+                          <input class="form-control" value="應該早點叫我正反握,累死我了">                        
                         </td>
                       </tr>
                     <tr>
@@ -260,11 +251,11 @@
             <!-- End Call Action --> 
           </div>
           </div>
+          </div>
         <!-- End Contact Form --> 
         
       </div>
       </div>
-  </div>
   </div>
 <!-- End content --> 
 
@@ -277,22 +268,27 @@
 <!-- Go To Top Link --> 
 <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
 </div>
-<script type="text/javascript" src="js/script.js"></script> 
+
 <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="flot/excanvas.min.js"></script><![endif]-->
-<script language="javascript" type="text/javascript" src="flot/excanvas.min.js"></script>
+<script type="text/javascript" src="flot/jquery.js"></script> 
 <script language="javascript" type="text/javascript" src="flot/jquery.flot.js"></script>
 <script language="javascript" type="text/javascript" src="flot/jquery.flot.pie.js"></script>
 
-<script src="https://code.highcharts.com/highcharts.js"></script> 
-<script src="https://code.highcharts.com/modules/exporting.js"></script> 
 <script type="text/javascript">
-	$(function () {
+  $(document).ready(function() {
+
+$(function() {
 	
-		var data = [
-			{ label: "動作學習",  data: 10},
-			{ label: "姿勢矯正",  data: 30},
-			{ label: "訓練",  data: 90}
-		];
+	
+		var data = [],
+			series = Math.floor(Math.random() * 6) + 3;
+
+		for (var i = 0; i < series; i++) {
+			data[i] = {
+				label: "Series" + (i + 1),
+				data: Math.floor(Math.random() * 100) + 1
+			}
+		}
 
 
 		var placeholder = $("#placeholder3");
@@ -302,66 +298,168 @@
 
 
 			$.plot(placeholder, data, {
-    series: {
-        pie: {
-            show: true,
-            radius: 1,
-            label: {
-                show: true,
-                radius: 2/3,
-                formatter: function(label, series){   
-                        return '<div style="font-size:10pt;text-align:center;padding:2px;color:white;">'+label+'<br/>'+Math.round(series.percent)+'%</div>';   
-                    },
-                threshold: 0.1
-            }
-        } 
-    },   
-        legend: {   
-            show: false  
-        }  
-					});
-			
-			
-		var data2 = [
-			{ label: "柔軟度",  data: 13},
-			{ label: "心肺",  data: 45},
-			{ label: "肌力",  data: 30},
-			{ label: "肌耐力",  data: 10},
-			{ label: "爆發力",  data: 2},
-			{ label: "運動表現",  data: 10}
-		];
+				series: {
+					pie: { 
+						show: true
+					}
+				}
+			});
 
 
-		var placeholder2 = $("#placeholder4");
 
+    
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		var d1 = [];
+    for (var i = 0; i <= 12; i += 1) {
+      d1.push([i, parseInt(Math.random() * 30)]);
+    }
 
-			placeholder.unbind();
+    var d2 = [];
+    for (var i = 0; i <= 12; i += 1) {
+      d2.push([i, parseInt(Math.random() * 50)]);
+    }
 
+    var d3 = [];
+    for (var i = 0; i <= 12; i += 1) {
+      d3.push([i, parseInt(Math.random() * 20)]);
+    }
 
-			$.plot(placeholder2, data2, {
-    series: {
-        pie: {
-            show: true,
-            radius: 1,
-            label: {
-                show: true,
-                radius: 2/3,
-                formatter: function(label, series){   
-                        return '<div style="font-size:10pt;text-align:center;padding:2px;color:white;">'+label+'<br/>'+Math.round(series.percent)+'%</div>';   
-                    },
-                threshold: 0.1
-            }
+    $.plot("#placeholder2", [
+      { label: "柔軟度", data: d1 },
+      { label: "心肺", data: d2 },
+      { label: "肌力", data: d3 }
+    ], {
+      series: {
+        lines: { show: true },
+        points: { show: true }
+      }, 
+      xaxis: {
+        font: {
+          size: 12,
+          lineHeight: 13,
+          weight: "bold",
+          family: "Verdana, Arial, Helvetica, Tahoma, sans-serif",
+          color: "#000"         
+        },
+        axisLabelFontSizePixels: 18,
+        axisLabel: '月',
+        axisLabelUseCanvas: true,
+        axisLabelFontFamily: 'Verdana, Arial, Helvetica, Tahoma, sans-serif',
+        axisLabelPadding: 5,
+        ticks: [[ 0, "05" ], [ 1, "06" ],
+          [ 2, "07" ], [ 3, "08" ],
+          [ 4, "09" ], [ 5, "10" ],
+          [ 6, "11" ], [ 7, "12" ],
+          [ 8, "01" ], [ 9, "02" ],
+          [ 10, "03" ], [ 11, "04" ],
+          [ 12, "05" ], [ 13, "06" ],
+        ],
+      },
+      yaxis: {
+        font: {
+          size: 14,
+          lineHeight: 13,
+          weight: "bold",
+          family: "Verdana, Arial, Helvetica, Tahoma, sans-serif",
+          color: "#000"         
+        },
+        axisLabelFontSizePixels: 16,
+        axisLabel: '％',
+        axisLabelUseCanvas: true,
+        axisLabelFontFamily: 'Verdana, Arial, Helvetica, Tahoma, sans-serif',
+        axisLabelPadding: 5,          
+        ticks: 10,
+        min: 0,
+        max: 100,
+        tickDecimals: 0
+      },
+      grid: {
+        backgroundColor: { colors: [ "#FFF", "#eeeeee" ] },
+        borderWidth: {
+          top: 1,
+          right: 1,
+          bottom: 2,
+          left: 2
         }
-    },   
-        legend: {   
-            show: false  
-        } 
-				
-					});
-			
-			
-			
-	});
-		</script>
+      }
+    });   
+
+    $.plot("#placeholder1", [
+      { label: "動作學習", data: d1 },
+      { label: "姿勢矯正", data: d2 },
+      { label: "訓練", data: d3 }
+    ], {
+      series: {
+        lines: { show: true },
+        points: { show: true }
+      },
+      xaxis: {
+        font: {
+          size: 12,
+          lineHeight: 13,
+          weight: "bold",
+          family: "Verdana, Arial, Helvetica, Tahoma, sans-serif",
+          color: "#000"         
+        },
+        axisLabelFontSizePixels: 18,
+        axisLabel: '月',
+        axisLabelUseCanvas: true,
+        axisLabelFontFamily: 'Verdana, Arial, Helvetica, Tahoma, sans-serif',
+        axisLabelPadding: 5,
+        ticks: [[ 0, "05" ], [ 1, "06" ],
+          [ 2, "07" ], [ 3, "08" ],
+          [ 4, "09" ], [ 5, "10" ],
+          [ 6, "11" ], [ 7, "12" ],
+          [ 8, "01" ], [ 9, "02" ],
+          [ 10, "03" ], [ 11, "04" ],
+          [ 12, "05" ], [ 13, "06" ],
+        ],
+      },
+      yaxis: {
+        font: {
+          size: 14,
+          lineHeight: 13,
+          weight: "bold",
+          family: "Verdana, Arial, Helvetica, Tahoma, sans-serif",
+          color: "#000"         
+        },
+        axisLabelFontSizePixels: 16,
+        axisLabel: '％',
+        axisLabelUseCanvas: true,
+        axisLabelFontFamily: 'Verdana, Arial, Helvetica, Tahoma, sans-serif',
+        axisLabelPadding: 5,        
+        ticks: 10,
+        min: 0,
+        max: 100,
+        tickDecimals: 0
+      },
+      grid: {
+        backgroundColor: { colors: [ "#FFF", "#eeeeee" ] },
+        borderWidth: {
+          top: 1,
+          right: 1,
+          bottom: 2,
+          left: 2
+        }
+      }
+    });   
+   });
+  }); 
+</script>
 </body>
 </html>
