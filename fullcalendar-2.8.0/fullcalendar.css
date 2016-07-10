@@ -1267,9 +1267,9 @@ be a descendant of the grid when it is being dragged.
 
 .ui-widget-header {
     border-width: 0px !important;
-		border-bottom: 1px solid #1D86C8 !important;
+		border-bottom: 1px solid #707070 !important;
     background: #FFF;
-    color: #1D86C8;
+    color: #333;
     font-weight: bold;
 		text-align:left !important;
 }
@@ -1303,7 +1303,7 @@ td.ui-widget-content:hover {
 .ui-state-highlight {
     /*border: 1px solid #f9dd34;*/
 		border-width:0px !important;
-    background: #1D86C8 !important;
+    background: #707070 !important;
     color: #FFF !important;
 		border-radius: 10px;
 }
